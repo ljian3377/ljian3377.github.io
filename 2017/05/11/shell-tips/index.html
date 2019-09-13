@@ -108,18 +108,18 @@
 
 
 
-<meta name="description" content="shell 将通配符*替换为当前目录下的各个文件和目录，然后再传给命令。 通配符 *shell 将通配符*替换为当前目录下的各个文件和目录，然后再传给命令。比如ls *是 ls(当前目录下的所有文件 + 当前目录下所有文件夹), 其中ls(当前目录下所有文件夹) 将会列举这些文件夹下的文件(夹) 12345678➜ ls -p    # append &apos;/&apos; at the end of a dir">
+<meta name="description" content="通配符 *shell 将通配符*替换为当前目录下的各个文件和目录，然后再传给命令。比如ls *是ls(当前目录下的所有文件 + 当前目录下所有文件夹), 其中ls(当前目录下所有文件夹) 将会列举这些文件夹下的文件(夹) 12345678➜ ls -p    # append &apos;/&apos; at the end of a directorypkg/  tmp➜ ls *tmppkg:    # list">
 <meta name="keywords" content="shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shell Tips">
+<meta property="og:title" content="shell tips">
 <meta property="og:url" content="http://yoursite.com/2017/05/11/shell-tips/index.html">
 <meta property="og:site_name" content="darlin&#39;s lin">
-<meta property="og:description" content="shell 将通配符*替换为当前目录下的各个文件和目录，然后再传给命令。 通配符 *shell 将通配符*替换为当前目录下的各个文件和目录，然后再传给命令。比如ls *是 ls(当前目录下的所有文件 + 当前目录下所有文件夹), 其中ls(当前目录下所有文件夹) 将会列举这些文件夹下的文件(夹) 12345678➜ ls -p    # append &apos;/&apos; at the end of a dir">
+<meta property="og:description" content="通配符 *shell 将通配符*替换为当前目录下的各个文件和目录，然后再传给命令。比如ls *是ls(当前目录下的所有文件 + 当前目录下所有文件夹), 其中ls(当前目录下所有文件夹) 将会列举这些文件夹下的文件(夹) 12345678➜ ls -p    # append &apos;/&apos; at the end of a directorypkg/  tmp➜ ls *tmppkg:    # list">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-13T09:35:57.615Z">
+<meta property="og:updated_time" content="2019-09-13T10:12:17.388Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shell Tips">
-<meta name="twitter:description" content="shell 将通配符*替换为当前目录下的各个文件和目录，然后再传给命令。 通配符 *shell 将通配符*替换为当前目录下的各个文件和目录，然后再传给命令。比如ls *是 ls(当前目录下的所有文件 + 当前目录下所有文件夹), 其中ls(当前目录下所有文件夹) 将会列举这些文件夹下的文件(夹) 12345678➜ ls -p    # append &apos;/&apos; at the end of a dir">
+<meta name="twitter:title" content="shell tips">
+<meta name="twitter:description" content="通配符 *shell 将通配符*替换为当前目录下的各个文件和目录，然后再传给命令。比如ls *是ls(当前目录下的所有文件 + 当前目录下所有文件夹), 其中ls(当前目录下所有文件夹) 将会列举这些文件夹下的文件(夹) 12345678➜ ls -p    # append &apos;/&apos; at the end of a directorypkg/  tmp➜ ls *tmppkg:    # list">
 
 
 
@@ -153,7 +153,7 @@
 
 
 
-  <title>Shell Tips | darlin's lin</title>
+  <title>shell tips | darlin's lin</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -345,7 +345,7 @@
             
             
               
-                Shell Tips
+                shell tips
               
             
           </h1>
@@ -417,11 +417,9 @@
       
 
       
-        <p>shell 将通配符*替换为当前目录下的各个文件和目录，然后再传给命令。</p>
-<h2 id="通配符"><a href="#通配符" class="headerlink" title="通配符 *"></a>通配符 *</h2><p>shell 将通配符*替换为当前目录下的各个文件和目录，然后再传给命令。<br>比如ls *是 ls(<code>当前目录下的所有文件</code> + <code>当前目录下所有文件夹</code>), 其中ls(<code>当前目录下所有文件夹</code>) 将会列举这些文件夹下的文件(夹)</p>
+        <h2 id="通配符"><a href="#通配符" class="headerlink" title="通配符 *"></a>通配符 *</h2><p>shell 将通配符<code>*</code>替换为当前目录下的各个文件和目录，然后再传给命令。<br>比如<code>ls *</code>是ls(<code>当前目录下的所有文件</code> + <code>当前目录下所有文件夹</code>), 其中ls(<code>当前目录下所有文件夹</code>) 将会列举这些文件夹下的文件(夹)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">➜ ls -p    <span class="comment"># append '/' at the end of a directory</span></span><br><span class="line">pkg/  tmp</span><br><span class="line"></span><br><span class="line">➜ ls *</span><br><span class="line">tmp</span><br><span class="line"></span><br><span class="line">pkg:    <span class="comment"># list content in directory pkg</span></span><br><span class="line">a.tgz.gpg read.sh</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h2><p>^：匹配正则表达式的开始行。<br>[a,b]:匹配list中的任一个即可 grep abc[1,2]</p>
 <h2 id="括号和大括号"><a href="#括号和大括号" class="headerlink" title="括号和大括号"></a>括号和大括号</h2><p><code>()</code> 包裹的代码在子shell 里执行，<code>{}</code> 包含的代码在当前shell里执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">➜ (a=<span class="variable">$PWD</span>;<span class="built_in">echo</span> <span class="variable">$a</span>;)</span><br><span class="line">/Users/lin</span><br><span class="line">➜ <span class="built_in">echo</span> <span class="variable">$a</span>    <span class="comment"># a is not defined in current shell</span></span><br><span class="line"></span><br><span class="line">➜ &#123; a=<span class="variable">$PWD</span>;<span class="built_in">echo</span> <span class="variable">$a</span>; &#125;</span><br><span class="line">/Users/lin</span><br><span class="line">➜ <span class="built_in">echo</span> <span class="variable">$a</span></span><br><span class="line">/Users/lin</span><br></pre></td></tr></table></figure></p>
 <h2 id="echo-expression"><a href="#echo-expression" class="headerlink" title="echo $((expression))"></a>echo $((expression))</h2><p>运算展开<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">➜ <span class="built_in">echo</span> $((1+2))</span><br><span class="line">3</span><br></pre></td></tr></table></figure></p>
 <p>进制</p>
@@ -596,7 +594,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -665,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#通配符"><span class="nav-number">1.</span> <span class="nav-text">通配符 *</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grep"><span class="nav-number">2.</span> <span class="nav-text">grep</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#括号和大括号"><span class="nav-number">3.</span> <span class="nav-text">括号和大括号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echo-expression"><span class="nav-number">4.</span> <span class="nav-text">echo $((expression))</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单引号和双引号"><span class="nav-number">5.</span> <span class="nav-text">单引号和双引号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-be-continued"><span class="nav-number">6.</span> <span class="nav-text">To be continued.</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#通配符"><span class="nav-number">1.</span> <span class="nav-text">通配符 *</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#括号和大括号"><span class="nav-number">2.</span> <span class="nav-text">括号和大括号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echo-expression"><span class="nav-number">3.</span> <span class="nav-text">echo $((expression))</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单引号和双引号"><span class="nav-number">4.</span> <span class="nav-text">单引号和双引号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-be-continued"><span class="nav-number">5.</span> <span class="nav-text">To be continued.</span></a></li></ol></div>
             
 
           </div>

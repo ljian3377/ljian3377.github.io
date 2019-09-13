@@ -7,20 +7,6 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/categories/C-C/</loc>
-        <lastmod>2019-09-13T09:30:05.166Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/categories/algorithm/</loc>
-        <lastmod>2019-09-13T09:30:25.890Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://yoursite.com/categories/%E6%9D%82/</loc>
         <lastmod>2019-09-13T09:31:58.124Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -28,8 +14,22 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/categories/C-C/</loc>
+        <lastmod>2019-09-13T09:51:22.831Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/categories/algorithm/</loc>
+        <lastmod>2019-09-13T09:51:45.053Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://yoursite.com/categories/linux/</loc>
-        <lastmod>2019-09-13T09:35:57.615Z</lastmod>
+        <lastmod>2019-09-13T10:12:17.388Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

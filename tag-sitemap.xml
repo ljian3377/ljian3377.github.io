@@ -2,27 +2,6 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://yoursite.com/tags/typedef/</loc>
-        <lastmod>2019-09-13T09:30:05.166Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/tags/size-check/</loc>
-        <lastmod>2019-09-13T09:30:05.166Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/tags/array-rotation/</loc>
-        <lastmod>2019-09-13T09:30:25.890Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://yoursite.com/tags/hexo/</loc>
         <lastmod>2019-09-13T09:31:58.124Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -30,8 +9,22 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/tags/typedef/</loc>
+        <lastmod>2019-09-13T09:51:22.831Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/tags/rotation/</loc>
+        <lastmod>2019-09-13T09:51:45.053Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://yoursite.com/tags/shell/</loc>
-        <lastmod>2019-09-13T09:35:57.615Z</lastmod>
+        <lastmod>2019-09-13T10:12:17.388Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

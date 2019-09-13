@@ -8,7 +8,23 @@
 
     <url>
         <loc>http://yoursite.com/2017/05/11/shell-tips/</loc>
-        <lastmod>2019-09-13T09:35:57.615Z</lastmod>
+        <lastmod>2019-09-13T10:12:17.388Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2017/08/23/array-left-rotation/</loc>
+        <lastmod>2019-09-13T09:51:45.053Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/2017/05/11/typedef%E8%AF%A6%E8%A7%A3/</loc>
+        <lastmod>2019-09-13T09:51:22.831Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,22 +33,6 @@
     <url>
         <loc>http://yoursite.com/2017/04/18/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%85%A8%E8%AE%B0%E5%BD%95/</loc>
         <lastmod>2019-09-13T09:31:58.124Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2017/08/23/array-left-rotation/</loc>
-        <lastmod>2019-09-13T09:30:25.890Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/2017/05/11/typedef%E8%AF%A6%E8%A7%A3/</loc>
-        <lastmod>2019-09-13T09:30:05.166Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
