@@ -92,7 +92,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="array,">
+  <meta name="keywords" content="array-rotation,">
 
 
 
@@ -109,14 +109,14 @@
 
 
 <meta name="description" content="A left rotation operation on an array of size n shifts each of the array’s elements 1 unit to the left. For example, if 2 left rotations are performed on array [1, 2, 3, 4, 5], then the array would b">
-<meta name="keywords" content="array">
+<meta name="keywords" content="array-rotation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Array Left Rotation">
 <meta property="og:url" content="http://yoursite.com/2017/08/23/array-left-rotation/index.html">
 <meta property="og:site_name" content="darlin&#39;s lin">
 <meta property="og:description" content="A left rotation operation on an array of size n shifts each of the array’s elements 1 unit to the left. For example, if 2 left rotations are performed on array [1, 2, 3, 4, 5], then the array would b">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-13T07:27:28.215Z">
+<meta property="og:updated_time" content="2019-09-13T09:24:19.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Array Left Rotation">
 <meta name="twitter:description" content="A left rotation operation on an array of size n shifts each of the array’s elements 1 unit to the left. For example, if 2 left rotations are performed on array [1, 2, 3, 4, 5], then the array would b">
@@ -421,13 +421,13 @@
 <p>A <em>left rotation</em> operation on an array of size n shifts each of the array’s elements 1 unit to the left. For example, if 2 left rotations are performed on array [1, 2, 3, 4, 5], then the array would become [3, 4, 5, 1, 2] .<br>Given an array of n integers a, and a number k, perform k left rotations on the array.</p>
 </blockquote>
 <p><a href="https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem" target="_blank" rel="noopener">HackerRank</a></p>
-<p>Here we want solutions with O(1) additional space and O(n) time complexity. Though the OJ doesn’t require this, and the test frame it provides will ruin our effort to do it in place.<br><a id="more"></a></p>
+<p>Here we want solutions with O(1) additional space and O(n) time complexity.<br><a id="more"></a></p>
 <h1 id="My-solution"><a href="#My-solution" class="headerlink" title="My solution"></a>My solution</h1><p>  Note that the element at index <code>i</code> is moved to <code>(i-k) % n</code>.<br>  Let n = 15 and k = 6, then </p>
 <p>  a[0] &lt;- a[6] &lt;- a[12] &lt;- a[3] &lt;- a[9] &lt;- a[0],</p>
 <p>  a[1] &lt;- a[7] &lt;- a[13] &lt;- a[4] &lt;- a[10] &lt;- a[1],</p>
 <p>  a[2] &lt;- a[8] &lt;- a[14] &lt;- a[5] &lt;- a[11] &lt;- a[2].</p>
 <p>  Clearly, it forms 3 circles, and the 3 circles cover all the movement. 3 is the greatest common divisor (gcd) of 15 and 6.</p>
-<p>  It should be easy to prove that, the rotation can be break down to g (gcd of n and k) smaller circles, and within every circle are elements at index i, (i+k)%n, … We only need to rotate each circle by one step.</p>
+<p>  It should be easy to prove that, the rotation can be broken down to g (gcd of n and k) smaller circles, and within every circle are elements at index i, (i+k)%n, … We only need to rotate each circle by one step.</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (b==<span class="number">0</span>) <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> gcd(b, a%b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; array_left_rotation(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a, <span class="keyword">int</span> n, <span class="keyword">int</span> k) &#123;</span><br><span class="line">    <span class="keyword">if</span> (k==n) <span class="keyword">return</span> a;</span><br><span class="line">    <span class="keyword">int</span> g = gcd (n, k);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt; g; j++) &#123; </span><br><span class="line">        <span class="keyword">int</span> tmp = a[j], i = j, to_i = (i+k)%n;</span><br><span class="line">        <span class="keyword">while</span> (to_i !=j) &#123;</span><br><span class="line">            a[i] = a[to_i];</span><br><span class="line">            i = to_i;</span><br><span class="line">            to_i = (i+k)%n;</span><br><span class="line">        &#125;</span><br><span class="line">        a[i] = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span> k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a(n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> a_i = <span class="number">0</span>;a_i &lt; n;a_i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a[a_i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; output = array_left_rotation(a, n, k);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n;i++)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; output[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>There is another solution from the book, <em>Programming Pearls</em>.</p>
 <h1 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution 2"></a>Solution 2</h1><p><strong>Observation</strong>:</p>
@@ -468,7 +468,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/array/" rel="tag"># array</a>
+            <a href="/tags/array-rotation/" rel="tag"># array-rotation</a>
           
         </div>
       
@@ -490,10 +490,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/13/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -563,7 +559,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -574,7 +570,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -585,7 +581,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
