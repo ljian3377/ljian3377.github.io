@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/2019/09/13/The-hiding-rule-in-C/</loc>
+        <lastmod>2019-09-15T14:55:30.778Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/2017/05/11/shell-tips/</loc>
         <lastmod>2019-09-13T10:12:17.388Z</lastmod>
         <changefreq>weekly</changefreq>
